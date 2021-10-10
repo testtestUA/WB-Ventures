@@ -1,16 +1,36 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;300;400;500;600;700&display=swap');
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+
+  font-family: 'Gemunu Libre', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 0.8;
+}
+
+body {
+  font-size: 1.6rem;
+  background: #292e3a;
+}
+
+#__next {
+  margin: 0 auto;
+  position: relative;
+  max-width: 1440px;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.container_pd {
+  padding: 0 2.3rem;
+}
+
+@media (min-width: 70em) {
+  .container_pd {
+    padding: 0 16.4rem;
+  }
 }
