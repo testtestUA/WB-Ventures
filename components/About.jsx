@@ -85,8 +85,8 @@ const About = () => {
       <Container>
         <Title>{about.subtitle}</Title>
         <LogoContainer>
-          <Image src='/winxbet.png' width='164px' height='41px' />
-          <Image src='/betbase.png' width='120px' height='34px' />
+          <Image alt='logo' src='/winxbet.png' width='164px' height='41px' />
+          <Image alt='logo' src='/betbase.png' width='120px' height='34px' />
         </LogoContainer>
       </Container>
     </Wrapper>

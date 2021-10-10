@@ -35,6 +35,7 @@ const Hero = ({ title }) => {
     <Wrapper className='container_pd'>
       <Container>
         <Image
+          alt='logo'
           src='/logohero.png'
           width='228px'
           height='100px'
