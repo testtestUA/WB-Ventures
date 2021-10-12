@@ -129,4 +129,64 @@ module.exports.data = {
       },
     ],
   },
+  footer: {
+    list: [
+      {
+        name: 'About Us',
+        href: '/',
+      },
+      {
+        name: 'Our Brands',
+        href: '/',
+      },
+      {
+        name: 'In Numbers',
+        href: '/',
+      },
+      {
+        name: 'Departments',
+        href: '/',
+      },
+      {
+        name: 'Careers',
+        href: '/',
+      },
+      {
+        name: 'Contact',
+        href: '/',
+      },
+    ],
+    contact: [
+      {
+        name: 'Company',
+        text: 'Heelsumstraat 51 Curaçao, CW',
+      },
+      {
+        name: 'Call us',
+        text: '111-555-888',
+      },
+      {
+        name: 'Email us',
+        text: 'info@wbventuresnv.com',
+      },
+    ],
+    social: [
+      {
+        name: 'Twitter',
+        icon: 'fab fa-twitter',
+        href: '/',
+      },
+      {
+        name: 'Facebook',
+        icon: 'fab fa-facebook',
+        href: '/',
+      },
+    ],
+    copyright: {
+      text: 'Copyright © 2021 WB Ventures N.V.',
+    },
+    license: {
+      text: 'WB Ventures N.V.is the License Holder under License Number 8048/JAZ. Wincanyon Limited is the Payment Processor.',
+    },
+  },
 };
