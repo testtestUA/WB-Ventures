@@ -117,7 +117,7 @@ const Footer = () => {
   return (
     <Wrapper>
       <Padding>
-        <Image width='153px' height='67px' src={'/logoblack.png'} />
+        <Image alt='' width='153px' height='67px' src={'/logoblack.png'} />
         <UnOrderedList>
           {list.map((item, index) => (
             <ListItem key={index}>{item.name}</ListItem>
@@ -136,8 +136,8 @@ const Footer = () => {
           {/* <p>Social networks:</p> */}
           <div>
             {social.map((item, index) => (
-              <Link href={item.href} key={index} href=''>
-                <i class={item.icon}></i>
+              <Link href={item.href} key={index}>
+                <i className={item.icon}></i>
               </Link>
             ))}
           </div>

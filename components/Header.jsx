@@ -52,7 +52,7 @@ const Header = () => {
   return (
     <Wrapper>
       <LogoContainer>
-        <Image src='/logomob.png' width='124px' height='11.55px' />
+        <Image alt='' src='/logomob.png' width='124px' height='11.55px' />
       </LogoContainer>
       <HamburgerContainer>
         <Hamburger />
