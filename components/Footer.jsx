@@ -16,7 +16,7 @@ const Padding = styled.div`
     grid-auto-flow: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 5rem;
+    gap: 7rem;
     padding: 2.6rem 2rem 4.5rem 2rem;
   }
 `;
@@ -92,12 +92,21 @@ const SocialWrapper = styled.div`
       opacity: 60%;
     }
   }
+  @media (min-width: 70em) {
+    margin-top: 0rem;
+    div {
+      margin-top: 0rem;
+    }
+  }
 `;
 
 const Text = styled.p`
   color: #f2f2f2;
   font-weight: 300;
   margin-top: 2.5rem;
+  @media (min-width: 70em) {
+    margin-top: 0rem;
+  }
 `;
 
 const LicenseWrapper = styled.div`

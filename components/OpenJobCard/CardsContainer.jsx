@@ -27,7 +27,7 @@ const Container = styled.div`
 const CardsContainer = () => {
   const { openJobs } = data;
   return (
-    <Wrapper className='container_pd'>
+    <Wrapper id='openjob' className='container_pd'>
       <Title>{openJobs.title}</Title>
       <Container>
         {openJobs.cards.map((item, index) => (

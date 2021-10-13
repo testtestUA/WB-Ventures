@@ -8,6 +8,7 @@ const Wrapper = styled.section`
   height: 800px;
   background-image: url('/BG.jpg');
   background-position: center;
+  background-size: cover;
 `;
 
 const Container = styled.div`

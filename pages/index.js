@@ -21,15 +21,18 @@ export default function Home() {
           crossOrigin='anonymous'
           referrerpolicy='no-referrer'
         />
+        <title>WB VENTURES</title>
       </Head>
       <Header />
       <main>
         <article>
           <Hero title={title} />
-          <About />
-          <PropertyCards />
+          <div style={{ maxWidth: '1440px', margin: '0 auto' }}>
+            <About />
+            <PropertyCards />
+            <OpenJobContainer />
+          </div>
           <DepartmentContainer />
-          <OpenJobContainer />
           <Map />
           <Footer />
         </article>

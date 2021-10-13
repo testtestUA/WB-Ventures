@@ -5,9 +5,11 @@ import Card from './Card';
 const Wrapper = styled.section`
   display: grid;
   place-items: center;
-  background: #f2f2f2;
+
   margin-top: 10rem;
   padding-bottom: 8rem;
+  max-width: 1440px;
+  margin: 10rem auto 8rem auto;
 `;
 
 const Container = styled.div`
@@ -27,8 +29,9 @@ const CardsContainer = () => {
   const { departments } = data;
 
   return (
-    <Wrapper id='careers' className='container_pd'>
+    <Wrapper id='departments' className='container_pd'>
       <Title>{departments.title}</Title>
+
       <Container>
         {departments.cards.map((item, index) => (
           <Card key={index} {...item} />

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 import { data } from '../dataObject';
+import Link from 'next/link';
 
 const Wrapper = styled.section`
   display: grid;
@@ -40,7 +41,10 @@ const Button = styled.div`
   }
 `;
 
-const ButtonText = styled.p``;
+const ButtonText = styled.p`
+  font-size: 2.2rem;
+  cursor: pointer;
+`;
 
 const Title = styled.p`
   font-size: 3.4rem;
@@ -79,7 +83,12 @@ const About = () => {
         <Title>{about.title}</Title>
         <Text left dangerouslySetInnerHTML={{ __html: about.content }} />
         <Button>
-          <ButtonText>{about.redirect.text}</ButtonText>
+          <Link
+            href='mailto: info@wbventuresnv.com?subject=About WB Ventures N.V. '
+            target='_blank'
+          >
+            <ButtonText>{about.redirect.text}</ButtonText>
+          </Link>
         </Button>
       </Container>
       <Container>

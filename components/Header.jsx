@@ -1,15 +1,24 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import { data } from '../dataObject';
+import { scrollTo } from './scroll';
+import MobileHeader from './MobileHeader';
 
 const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: absolute;
+  /* max-width: 1440px; */
   width: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   color: #fff;
   padding: 2.4rem 2.3rem;
+
   @media (min-width: 50em) {
     padding: 4.9rem 10rem;
   }
@@ -19,6 +28,7 @@ const HamburgerContainer = styled.div`
   display: grid;
   gap: 0.5rem;
   cursor: pointer;
+  align-self: flex-start;
   @media (min-width: 50em) {
     display: none;
   }
@@ -48,22 +58,40 @@ const Hamburger = styled.div`
 const LogoContainer = styled.div``;
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const { header } = data;
   return (
     <Wrapper>
       <LogoContainer>
-        <Image alt='' src='/logomob.png' width='124px' height='11.55px' />
+        {/* <Image
+          className='logo-mob'
+          alt=''
+          src='/logomob.png'
+          width='124px'
+          height='11.55px'
+        /> */}
+        <Image
+          className='logo-web'
+          alt=''
+          src='/logoshortblack.png'
+          width='65px'
+          height='76px'
+        />
       </LogoContainer>
-      <HamburgerContainer>
+      <HamburgerContainer onClick={() => setMenuOpen(true)}>
         <Hamburger />
         <Hamburger />
         <Hamburger />
       </HamburgerContainer>
       <NavbarContainer>
         {header.map((item, index) => (
-          <NavButton key={index}>{item.name}</NavButton>
+          <NavButton onClick={() => scrollTo(index)} key={index}>
+            {item.name}
+          </NavButton>
         ))}
       </NavbarContainer>
+      {menuOpen && <MobileHeader setMenuOpen={setMenuOpen} />}
     </Wrapper>
   );
 };

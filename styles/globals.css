@@ -14,13 +14,12 @@ html {
 
 body {
   font-size: 1.6rem;
-  background: #292e3a;
+  background: #fff;
 }
 
 #__next {
   margin: 0 auto;
   position: relative;
-  max-width: 1440px;
   background: #fff;
   min-height: 100vh;
 }
