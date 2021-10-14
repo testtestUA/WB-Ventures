@@ -84,7 +84,7 @@ const About = () => {
         <Text left dangerouslySetInnerHTML={{ __html: about.content }} />
         <Button>
           <Link
-            href='mailto: info@wbventuresnv.com?subject=About WB Ventures N.V. '
+            href='https://opencorporates.com/companies/cw/149366'
             target='_blank'
           >
             <ButtonText>{about.redirect.text}</ButtonText>

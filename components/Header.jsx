@@ -8,7 +8,6 @@ import MobileHeader from './MobileHeader';
 const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
-  align-items: center;
   position: absolute;
   /* max-width: 1440px; */
   width: 100%;
@@ -19,8 +18,22 @@ const Wrapper = styled.header`
   color: #fff;
   padding: 2.4rem 2.3rem;
 
+  .logo-mob {
+    display: block;
+  }
+
+  .logo-web {
+    display: none;
+  }
+
   @media (min-width: 50em) {
     padding: 4.9rem 10rem;
+    .logo-mob {
+      display: none !important;
+    }
+    .logo-web {
+      display: block;
+    }
   }
 `;
 
@@ -64,14 +77,14 @@ const Header = () => {
   return (
     <Wrapper>
       <LogoContainer>
-        {/* <Image
+        <img
           className='logo-mob'
           alt=''
           src='/logomob.png'
           width='124px'
           height='11.55px'
-        /> */}
-        <Image
+        />
+        <img
           className='logo-web'
           alt=''
           src='/logoshortblack.png'
