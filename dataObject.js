@@ -151,10 +151,7 @@ module.exports.data = {
         name: 'Careers',
         href: '/',
       },
-      {
-        name: 'Contact',
-        href: '/',
-      },
+
     ],
     contact: [
       {

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
 import { data } from '../dataObject';
+import { scrollTo } from './scroll';
 
 const Wrapper = styled.footer`
   background: #000000;
@@ -122,16 +123,23 @@ const LicenseText = styled.p`
 
 const Footer = () => {
   const { footer } = data;
-  const { list, contact, copyright, license, social } = footer;
+  const { list, contact, copyright, license, social,header } = footer;
+
   return (
     <Wrapper>
       <Padding>
         <Image alt='' width='153px' height='67px' src={'/logoblack.png'} />
+
+
         <UnOrderedList>
           {list.map((item, index) => (
-            <ListItem key={index}>{item.name}</ListItem>
+
+            <ListItem onClick={() => scrollTo(index)} key={index}>{item.name}</ListItem>
+            
           ))}
         </UnOrderedList>
+
+
         <ContactWrapper>
           {contact.map((item, index) => (
             <ContactContainer key={index}>
@@ -141,16 +149,6 @@ const Footer = () => {
           ))}
         </ContactWrapper>
 
-        <SocialWrapper>
-          {/* <p>Social networks:</p> */}
-          <div>
-            {social.map((item, index) => (
-              <Link href={item.href} key={index}>
-                <i className={item.icon}></i>
-              </Link>
-            ))}
-          </div>
-        </SocialWrapper>
         <Text>{copyright.text}</Text>
       </Padding>
       <LicenseWrapper>
