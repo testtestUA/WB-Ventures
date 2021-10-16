@@ -94,7 +94,11 @@ const About = () => {
       <Container>
         <Title>{about.subtitle}</Title>
         <LogoContainer>
-          <a href="https://www.winxbet.net"><Image alt='logo' src='/winxbet.png' width='164px' height='41px' /></a>
+		
+		<a target="_blank" href="https://www.winxbet.net/" rel="noopener noreferrer">
+			<Image alt='logo' src='/winxbet.png' width='164px' height='41px' />
+		 </a>
+          
           <Image alt='logo' src='/betbase.svg' width='120px' height='34px'/>
         </LogoContainer>
       </Container>
